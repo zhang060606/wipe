@@ -97,7 +97,7 @@ cas.addEventListener(loosen,function(){
 	for (var j = 0; j < _h; j++) {
 		for (var i = 0; i < _w; i++) {
 			var f = ((_w*j)+i)*4+3;
-			if (a.data[f] == 0) {	
+			if (a.data[f] === 0) {	
 				c++;
 			}
 		}
