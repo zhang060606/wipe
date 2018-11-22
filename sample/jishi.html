@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<canvas id="cas" width="800" height="800"></canvas>
+</body>
+<ml>
+<script>
+var canvas = document.getElementById("cas")
+var context= canvas.getContext("2d");
+function drawcav(context,posX,posY,radius,color){
+	//保存当前绘图状态
+	context.save();
+	context.beginPath();
+	context.arc(posY,posX,radius,0,2*Math.PI);
+	context.fillStyle = color;
+	context.fill();
+	context.stroke();
+}
+function tuoyuan(context,a,b,c,d,e){
+	context.save();
+	context.translate(300,160);
+	context.beginPath();
+	context.ellipse(a,b,c,d,e,30,60);
+	context.fillStyle="white";
+	context.fill();
+	context.restore();
+}
+function tuoyuan1(context,a,b,c,d,e){
+	context.save();
+	context.translate(300,160);
+	context.beginPath();
+	context.ellipse(a,b,c,d,e,30,60);
+	context.fillStyle="black";
+	context.fill();
+	context.restore();
+}
+drawcav(context,100,350,50,"#b25c0f");
+drawcav(context,100,150,50,"#b25c0f");
+drawcav(context,200,250,100,"#b25c0f");
+tuoyuan(context,-80,30,40,60,0);
+tuoyuan(context,-20,30,40,60,0);
+tuoyuan(context,-50,90,35,70,55);
+tuoyuan1(context,-50,90,15,25,55);
+tuoyuan1(context,-70,45,15,20,0);
+tuoyuan1(context,-30,45,15,20,0);
+
+
+drawcav(context,100,730,30,"red");
+drawcav(context,100,570,30,"red");
+drawcav(context,200,650,100,"red");
+tuoyuan(context,350,90,40,60,55);
+tuoyuan1(context,350,90,15,25,55);
+tuoyuan1(context,330,45,15,20,0);
+tuoyuan1(context,370,45,15,20,0);
+
+</script>
